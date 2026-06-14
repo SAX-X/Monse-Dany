@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>MUNDO MUSICAL 🎵💙</title>
+
+    <style>
+        
+        body{
+            padding: 40px;  
+            font-family: Arial;
+            color:white;
+            background-image: url("IMG/Inicio1.jpeg");
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            margin-left: 260px;
+            transition: margin-left .5s ease;
+        }
+
+        /* BARRA LATERAL */
+        #barra-lateral{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 240px;
+            height: 100%;
+            background: rgba(0, 102, 204, 0.90);
+            backdrop-filter: blur(4px);
+            overflow-y: auto;
+            z-index: 999;
+            padding: 20px 10px;
+            border-right: 3px solid rgba(255,255,255,0.2);
+        }
+
+        #barra-lateral h3{
+            color: white;
+            text-align: center;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        #barra-lateral ul{
+            padding-left: 10px;
+            margin-bottom: 20px;
+        }
+
+        #barra-lateral .menu > li{
+            float:none;
+            margin-bottom: 8px;
+        }
+
+        #barra-lateral .menu li a{
+            background-color:#1E90FF;
+            color:white;
+            text-decoration:none;
+            padding:8px 10px;
+            display:block;
+            border-radius: 5px;
+        }
+
+        #barra-lateral .menu li a:hover{
+            background-color:#87CEFA;
+        }
+
+        #barra-lateral .menu li ul{
+            display:none;
+            margin-left:10px;
+        }
+
+        #barra-lateral .menu li:hover > ul{
+            display:block;
+        }
+
+        /* GALERÍA DE FAVORITAS EN LA BARRA */
+        #barra-lateral .galeria{
+            flex-direction: column;
+            gap: 0.7rem;
+            padding: 5px;
+        }
+
+        #barra-lateral .galeria > div{
+            height: 80px;
+            background-size: cover;
+            border-radius: 10px;
+        }
+
+        #barra-lateral .video-galeria{
+            height: 80px;
+            border-radius: 10px;
+        }
+
+        #barra-lateral .video-galeria video{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* BANNER */
+        #banner{
+            background-color: rgba(30, 144, 255, 0.85);
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 40px;
+            border-radius: 10px;
+            letter-spacing: 2px;
+        }
+
+        /* SECCIONES */
+        section{
+            padding:20px;
+            background-color:rgba(135, 206, 250, 0.75);
+            border-radius:10px;
+            margin-top:20px;
+        }
+
+        /* GALERÍAS */
+        .galeria{
+            display:flex;
+            height:20rem;
+            gap:1rem;
+        }
+
+        .galeria > div{
+            flex:1;
+            border-radius:1rem;
+            background-position:center;
+            background-repeat:no-repeat;
+            background-size:auto 100%;
+            transition:all .8s cubic-bezier(.25,.4,.45,1.4);
+        }
+
+        .galeria > div:hover{
+            flex:5;
+        }
+
+        /* VIDEO EN GALERÍA */
+        .video-galeria{
+            flex:1;
+            border-radius:1rem;
+            overflow:hidden;
+            background:black;
+            transition:all .8s cubic-bezier(.25,.4,.45,1.4);
+        }
+
+        .video-galeria:hover{
+            flex:5;
+        }
+
+        .video-galeria video{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+        }
+
+        /* VIDEO PRINCIPAL */
+        #jose{
+            display:block;
+            margin:0 auto;
+            width:50%;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px){
+            #barra-lateral{ 
+                position: static;
+                width: 100%;
+                height: auto;
+            }
+            body{ 
+                margin-left: 0; 
+                padding: 15px; 
+            }
+            .galeria{ flex-direction: column; height: auto; }
+            .galeria > div, .video-galeria{ height: 180px; }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- BARRA LATERAL -->
+<div id="barra-lateral">
+
+    <h3>Mis Favoritas 🎧</h3>
+
+    <div class="galeria">
+        <div style="background-image:url(IMG/fav1.jpeg)"></div>
+        <div style="background-image:url(IMG/fav2.jpeg)"></div>
+        <div style="background-image:url(IMG/fav3.jpeg)"></div>
+
+        <div class="video-galeria">
+            <video controls>
+                <source src="VID/Colapso.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div style="background-image:url(IMG/fav4.jpeg)"></div>
+        <div style="background-image:url(IMG/fav5.jpeg)"></div>
+    </div>
+
+    <br><br>
+
+    <ul class="menu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#clasicos">Clásicos</a></li>
+        <li><a href="#modernas">Actuales</a></li>
+        <li><a href="#amor">Canciones de Amor</a></li>
+        <li><a href="#migajera">La más migajera</a></li>
+        <li><a href="#favoritas">Mis Favoritas Danny</a></li>
+        <li><a href="#archivos">Archivos</a></li>
+        <li><a href="#enlaces">Enlaces</a></li>
+    </ul>
+
+</div>
+
+<!-- BANNER -->
+<div id="banner">
+    MUNDO MUSICAL 🎵💙
+</div>
+
+<!-- INICIO -->
+<section id="inicio">
+    <h2>Bienvenido al Universo de la Música</h2>
+    <p><font size="5" color="white" face="Arial Black">
+        Aquí celebramos los sonidos que nos acompañan en cada momento de la vida.
+        <br><br>
+        <video controls id="jose">
+            <source src="VID/Cancion1I.mp4" type="video/mp4">
+        </video>
+    </font></p>
+</section>
+
+<!-- CLÁSICOS -->
+<section id="clasicos">
+    <h2>Clásicos Musicales</h2>
+    <p><font size="4" color="white" face="Arial Black">
+        Canciones que nunca pasan de moda.
+    </font></p>
+
+    <div class="galeria">
+        <div style="background-image:url(IMG/JJA1.jpeg)"></div>
+        <div style="background-image:url(IMG/JJA2.jpg)"></div>
+        <div style="background-image:url(IMG/JJA3.jpeg)"></div>
+
+        <div class="video-galeria">
+            <video controls>
+                <source src="VID/JJVid.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div style="background-image:url(IMG/JJA4.jpeg)"></div>
+        <div style="background-image:url(IMG/JJA5.jpeg)"></div>
+        <div style="background-image:url(IMG/JJA6.jpeg)"></div>
+    </div>
+</section>
+
+<!-- MODERNAS -->
+<section id="modernas">
+    <h2>Música Actual</h2>
+    <p><font size="4" color="white" face="Arial Black">
+        Lo más nuevo y popular del momento de BTS.
+    </font></p>
+
+    <div class="galeria">
+        <div style="background-image:url(IMG/bts1.jpeg)"></div>
+        <div style="background-image:url(IMG/Bts2.jpeg)"></div>
+        <div style="background-image:url(IMG/Bts3.jpeg)"></div>
+
+        <div class="video-galeria">
+            <video controls>
+                <source src="VID/Bts1.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div style="background-image:url(IMG/Bts4.jpeg)"></div>
+        <div style="background-image:url(IMG/Bts5.jpeg)"></div>
+        <div style="background-image:url(IMG/bts6.jpeg)"></div>
+    </div>
+</section>
+
+<!-- AMOR -->
+<section id="amor">
+    <h2>Canciones de Amor</h2>
+    <p><font size="4" color="white" face="Arial Black">
+        Melodías que me tocan el corazón.
+    </font></p>
+
+    <div class="galeria">
+        <div style="background-image:url(IMG/TC1.jpeg)"></div>
+        <div style="background-image:url(IMG/TC2.jpeg)"></div>
+        <div style="background-image:url(IMG/TC3.jpeg)"></div>
+
+        <div class="video-galeria">
+            <video controls>
+                <source src="VID/Amimegusta.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div style="background-image:url(IMG/TC4.jpeg)"></div>
+        <div style="background-image:url(IMG/TC5.jpeg)"></div>
+        <div style="background-image:url(IMG/TC6.jpeg)"></div>
+    </div>
+</section>
+
+<!-- LA MÁS MIGAJERA -->
+<section id="migajera">
+    <h2>La más migajera</h2>
+    <p><font size="4" color="white" face="Arial Black">
+        La más migajera, arrastrada y que más me representa.
+    </font></p>
+
+    <div class="galeria">
+
+        <!-- VIDEO PRINCIPAL -->
+        <div class="video-galeria" style="flex:2;">
+            <video controls>
+                <source src="VID/Migaja1.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <!-- IMÁGENES -->
+        <div style="background-image:url(IMG/Arrol.jpeg)"></div>
+        <div style="background-image:url(IMG/BMS.webp)"></div>
+        <div style="background-image:url(IMG/EPP.jpeg)"></div>
+
+    </div>
+</section>
+
+<!-- FAVORITAS DANNY -->
+<section id="favoritas">
+    <h2>Mis Favoritas Danny 🎧</h2>
+    <p><font size="4" color="white" face="Arial Black">
+        Estas son mis canciones favoritas.
+    </font></p>
+
+    <div class="galeria">
+        <div class="video-galeria">
+            <video controls>
+                <source src="VID/Beso.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="video-galeria">
+            <video controls>
+                <source src="VID/Colapso.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="video-galeria">
+            <video controls>
+                <source src="VID/Doma.mp4" type="video/mp4">
+            </video>
+        </div>
+
+    </div>
+</section>
+
+<!-- ARCHIVOS -->
+<section id="archivos">
+    <h2>Archivos del Proyecto</h2>
+    <p><font size="4" color="white" face="Arial Black">
+        Documentos importantes del proyecto musical.
+    </font></p>
+
+    <ul style="font-size:20px; line-height:40px;">
+
+        <!-- PDF -->
+        <li>
+            <a href="ARCHIVOS/PDF.pdf" target="_blank">PDF</a>
+        </li>
+
+        <!-- DOCX (Drive convertido) -->
+        <li>
+            <a href="https://docs.google.com/document/d/1bJghl1MREGVhauJ2zkDRCHa9kcBt6FjS/preview" target="_blank">
+                Documento DOCX
+            </a>
+        </li>
+
+        <!-- PPTX (Drive convertido) -->
+        <li>
+            <a href="https://docs.google.com/presentation/d/1FP-TK2Mt7DpEqqV2NeMavmuJ0xCt8sCl/preview" target="_blank">
+                Presentación PPTX
+            </a>
+        </li>
+
+        <!-- XLSX (Drive convertido) -->
+        <li>
+            <a href="https://docs.google.com/spreadsheets/d/1muGtj3ftzzW0CwNQNkIyeOHYs_pcNb0N/preview" target="_blank">
+                Hoja de Cálculo XLSX
+            </a>
+        </li>
+
+    </ul>
+</section>
+
+<!-- ENLACES (8 internas y 3 externas) -->
+<section id="enlaces">
+    <h2>PAGINAS</h2>
+    <p><font size="4" color="white" face="Arial Black">
+        Navega por las páginas internas y externas
+    </font></p>
+
+    <h3>Páginas internas</h3>
+    <ul style="font-size:18px; line-height:32px;">
+        <li><a href="PAGINASIE/P1.html" target="_blank">Clásicos</a></li>
+        <li><a href="PAGINASIE/P2.html" target="_blank">Actuales</a></li>
+        <li><a href="PAGINASIE/P3.html" target="_blank">Canciones de Amor</a></li>
+        <li><a href="PAGINASIE/P4.html" target="_blank">Desamor</a></li>
+        <li><a href="PAGINASIE/P5.html" target="_blank">La más migajera</a></li>
+        <li><a href="PAGINASIE/P6.html" target="_blank">Mis Favoritas Danny</a></li>
+        <li><a href="PAGINASIE/P7.html" target="_blank">Especial BTS</a></li>
+        <li><a href="PAGINASIE/P8.html" target="_blank">Especial Juanes/Jesse & Joy</a></li>
+    </ul>
+
+    <h3>Enlaces externos</h3>
+    <ul style="font-size:18px; line-height:32px;">
+        <li><a href="https://musica.fandom.com/es/wiki/Jos%C3%A9_Jos%C3%A9" target="_blank">Fandom Jose Jose</a></li>
+        <li><a href="https://elportaldemusica.es/" target="_blank">El poprtal de musica</a></li>
+        <li><a href="https://www.shazam.com/es-es" target="_blank">Shazam</a></li>
+    </ul>
+</section>
+
+</body>
+</html>
